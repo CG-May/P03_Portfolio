@@ -1,103 +1,245 @@
-body {
-  font-family: Arial;
-  margin: 1em;
-}
-
 * {
   box-sizing: border-box;
 }
 
-img {
-  vertical-align: middle;
-  width:100%;
+body {
+  margin: 0;
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  color: #1e1117;
+    background-color: #C54B38;
+	height:100%;
 }
 
-div{
+
+h1{
+	text-align:center;
+	font-family:'Bitter', serif;
+	font-size:2em;
+}
+
+p{
+	padding:1em;
+}
+
+.divider-left{
+	text-align:left;
+}
+
+.divider-right{
+	text-align:right;
+}
+
+.signature{
+	width:25%;
+	float:right;
+	margin-right:3em;
+}
+
+.paraCetnerParagraphs{
+	opacity:1;
+}
+
+.paraCenter{
+	text-align:center;
+	padding: 2em;
+	background-color: #FCE5E0;
+	float:right;
 	margin:1em;
+	border: 1px solid #1e1117;
+	opacity:0.85;
 }
 
-/* Position the image container (needed to position the left and right arrows) */
-.container {
-  position: relative;
+.paraCetnerParagraphs{
+	opacity:1;
 }
 
-/* Hide the images by default */
-.mySlides {
-  display: none;
+.topnav {
+  overflow: hidden;
+  background-color: #1e1117;
+  color: #F7F7F7;
+  border: 1px solid  #1e1117;
 }
 
-/* Add a pointer when hovering over the thumbnail images */
-.cursor {
-  cursor: pointer;
-}
-
-/* Next & previous buttons */
-.prev,
-.next {
-  cursor: pointer;
-  position: absolute;
-  top: 40%;
-  width: auto;
-  padding: 16px;
-  margin-top: -50px;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  border-radius: 0 3px 3px 0;
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
-  background-color: rgba(0, 0, 0, 0.8);
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* Container for image text */
-.caption-container {
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #F7F7F7;
   text-align: center;
-  background-color: #222;
-  padding: 2px 16px;
-  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  border: 1px solid  #1e1117;
 }
 
-.row:after {
-  content: "";
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #FCE5E0;
+  color: #1e1117;
+  border: 1px solid  #1e1117;
+}
+
+/* Style the content */
+.content {
+  background:url('../images/filter_image.PNG') #C54B38;
+  background-repeat: repeat-y;
+  background-size:100%;
+  padding: 10px;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+  margin:10px;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%:);
+}
+
+.bioContent{
+	text-align:center;
+	padding:10px;
+	border: 1px solid #1e1117;
+	background-color:#FCE5E0;
+	margin:10px;
+
+}
+
+.projectContent{
+	text-align:left;
+	padding:10px;
+	border: 1px solid #1e1117;
+	background-color:#FCE5E0;
+	margin:10px;
+
+}
+
+.signature{
+	width:200px;
+	padding-right:50px;
+}
+
+/* Style the footer */
+
+
+.footer {
+	background-color: #F37E67;
+	padding:10px;
+}
+
+.portfolioLink{
+	color:#f7f7f7;
+	text-align:center;
+}
+
+.leftSection{
+	  float: left;
+  width: 30%;
+  background: #F7F7F7;
+  padding: 20px;
+height:auto;
+display:table-cell;
+column-fill:balance;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #FCE5E0;
+height:auto;
+display:table-cell;
+column-fill:balance;
+}
+
+.leftSection:after{
+	  content: "";
   display: table;
   clear: both;
 }
 
-/* Six columns side by side */
-.column {
-  float: left;
-  width: 16.66%;
+.twoSections{
+	display:table;
+	width:100%;
 }
 
-/* Add a transparency effect for thumnbail images */
-.demo {
-  opacity: 0.6;
+
+a{
+	background-color:transparent;
+	}
+
+a:active,a:hover{
+	outline-width:0;
+	}
+	
+.column{
+	float:left;
+	width:50%;
 }
 
-.active,
-.demo:hover {
-  opacity: 1;
+.row:after{
+	content:"";
+	display:table;
+	clear:both;
 }
 
-/*references:
-https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_slideshow_gallery*/
+.navButton{
+	padding: .5em;
+	float: left;
+	width:auto;
+	border:none;
+	display:block;
+	outline: 0;
+}
+
+
+.left-align{
+	text-align:left;
+	}
+
+.display{
+	max-width:100%;
+	padding:10px;
+}
+
+@media (max-width:768px){
+	.modal-content{
+			width:500px
+		}
+		.modal{
+			padding-top:50px
+		}
+	}
+@media (min-width:993px){
+	.modal-content{
+			width:900px
+		}
+	.hide-large{
+		display:none;
+		}
+	.sidebar .collapse{
+		display:block
+		}
+}
+@media (max-width:992px) and (min-width:601px){
+	.hide-medium{
+		display:none
+		}
+	}
+	
+@media (max-width: 600px) {
+  .leftSection, article {
+    width: 100%;
+    height: auto;
+  }
+}	
+
+@media (max-width:992px){
+	.sidebar .collapse{
+		display:none
+		}
+		.main{
+			margin-left:0;
+			margin-right:0
+		}
+		.auto{
+			max-width:100%;
+			}
+		}
