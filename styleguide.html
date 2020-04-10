@@ -15,6 +15,7 @@
 </head>
 
 <body>
+<script src="js\script.js"></script>
   <!--Top of the body-->
   <header id="title">
     <!--Title of page-->
@@ -43,6 +44,7 @@
           <li><a href="#navlink">Navigation Link</a></li>
 		  <li><a href="#gallery">Image Gallery</a></li>
 		  <li><a href="#contactform">Contact Form</a></li>
+		  <li><a href="#backgroundimage">Background Image</a></li>
 
         </ul>
         <h3>Colour Scheme</h3>
@@ -128,7 +130,7 @@
         </div>
         <div id="input">
           <h2>INPUT BOX</h2>
-          <input type="text">
+          <input type="email" class="contact-form-text" placeholder="Email">
           <p>Used for the customer to type in information</p>
         </div>
         <div id="radio">
@@ -181,9 +183,22 @@
 			</div>
         </div>
 		
-		 <div id="paragraphs">
+		 <div id="contactform">
           <h2>CONTACT FORM</h2>
+		  			<section class="content">
+			<h1>Contact Me Here!</h1>
+			<div class="divider"></div>
+			<form class="contact-form" method="post">
+				<input type="text" class="contact-form-text" placeholder="Name">
+				<input type="email" class="contact-form-text" placeholder="Email">
+				<textarea class="contact-form-text" placeholder="Your Message"></textarea>
+				<input type="submit" class="button" value="Send!">
+
+		</section>
         </div>
+		<div id="backgroundimage">
+			<img src="images/filter_image.PNG" width=500px;>
+		</div>
 
 
       </section>
@@ -192,10 +207,9 @@
   </div>
 
  			<footer>
-				  <p><a href="styleguide.html">Style Guide</a>
-				  <p><a href="https://github.com/CG-May/P03_Portfolio.git">GitHub</a></p></p>
-
-    <a href="citations.html">Citations</a>
+				  <p><a href="styleguide.html">Style Guide</a></p>
+				  <p><a href="https://github.com/CG-May/P03_Portfolio.git">GitHub</a></p>
+				<p>Citations are in css files</p>
   </footer>
 </body>
 

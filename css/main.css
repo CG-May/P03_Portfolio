@@ -1,11 +1,22 @@
+/*All references are commented into the CSS*/
+/*ALL IMAGES USED ARE MY OWN IMAGES except for 2:
+Coolors image from: https://coolors.co/export/png/f7f7f7-fce5e0-f37e67-c54b38-1e1117 
+Hamburger menu icon from https://kit.fontawesome.com/38b79869b2.js*/
+
 *{
 	box-sizing:border-box;
 	margin:0;
 	padding:0;
 }
 
+html,body{
+	height:100%
+}
+
 html{
 	scroll-behavior: smooth;
+	display:table;
+	margin:auto;
 }
 
 body {
@@ -18,7 +29,11 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
-  /* https://www.w3schools.com/howto/howto_css_center_website.asp */
+  /* https://www.w3schools.com/howto/howto_css_center_website.asp  & https://stackoverflow.com/questions/6464592/how-to-align-entire-html-body-to-the-center*/
+  vertical-align: middle ;
+  display:table-cell;
+
+margin: auto;
 }
 
 #title {
@@ -49,6 +64,7 @@ h2 {
   border-radius: 20px;
   border:1px solid #1e1117;
   padding: 0.5em;
+  margin:1em;
     text-align:center;
 	font-family:'Bitter', serif;
 }
@@ -318,6 +334,10 @@ a img:hover {
   /* margin:-1rem; */
 }
 
+div{
+	padding:1em;
+}
+
 #styleguide {
   padding-bottom: 2rem;
   border-top-width: 0.15rem;
@@ -325,21 +345,6 @@ a img:hover {
   border-top-color: black;
 }
 
-
-#homepage {
-  margin-left: 5em;
-  margin-right: 5em;
-}
-
-#homepage p ol {
-  margin-left: 3em;
-  margin-right: 3em;
-}
-
-#homepage ol {
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
 
 #home div {
   padding-bottom: 2rem;
@@ -350,12 +355,6 @@ a img:hover {
 }
 
 /*classes*/
-.container #addressinfo, .container #cardinfo {
-  border: 5px groove white;
-  flex-basis: 100em;
-  padding: 1em;
-  margin: 1em;
-}
 
 .container {
   display: flex;
@@ -385,43 +384,14 @@ a img:hover {
   padding: 1em;
 }
 
-.fas fa-grip-lines-vertical {
-  color: black;
-}
-
-.fa-quote-left, .fa-quote-right {
-  padding: 5px;
-}
-
-.item {
-  text-align: center;
-  background: rgb(255, 255, 255);
-  background: radial-gradient(circle, rgba(255, 255, 255, 1) 65%, rgba(200, 254, 247, 0.5) 100%);
-  padding: .5em;
-  max-width: 500px;
-  margin: .5em;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-width: 4px;
-  border-color: #97F5E7;
-  border-radius: 10px;
-  border-style: solid;
-}
-
-.item img {
-  border: 1px solid black;
-}
 
 p{
 	padding:10px;
 }
 
-.item p {
-  max-width: 500px;
-}
 
-.quantity {
-  text-align: center;
-}
+
+/*Used as guide: https://www.youtube.com/watch?v=opbtRRSHGnk*/
 
 .contact-div{
 	background: url('images/filter_image.PNG') no-repeat center;
@@ -488,25 +458,6 @@ textarea.contact-form-text{
 
 
 
-.cart {
-  border: none;
-  outline: 0;
-  padding: 10px;
-  color: white;
-  background-color: rgb(48, 179, 169);
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 15px;
-}
-
-.cart:hover {
-  color: white;
-  text-decoration: underline;
-}
-
-/* Checkout */
-/* https://www.w3schools.com/howto/howto_css_checkout_form.asp */
 .row {
   display: -ms-flexbox;
   display: flex;
@@ -515,37 +466,7 @@ textarea.contact-form-text{
   margin: 0 -16px;
 }
 
-.col-25 {
-  -ms-flex: 25%;
-  flex: 25%;
-}
 
-.col-50 {
-  -ms-flex: 50%;
-  flex: 50%;
-}
-
-.col-75 {
-  -ms-flex: 75%;
-  flex: 75%;
-}
-
-.col-25,
-.col-50,
-.col-75 {
-  padding: 0 16px;
-}
-
-label {
-  margin-bottom: 10px;
-  display: block;
-}
-
-.icon-container {
-  margin-bottom: 20px;
-  padding: 7px 0;
-  font-size: 24px;
-}
 
 .btn {
   background-color: #4CAF50;
@@ -613,6 +534,12 @@ nav{
 	display:block;
 }
 
+#images{
+	display:flex;
+	justify-content:space-around;
+	width:300px;
+}
+
 footer{
 	position: static;
     left: 0;
@@ -623,6 +550,7 @@ footer{
     text-align: center;
 	margin:1em;
     padding: 1em;
+	border:solid 1px #1e1117;
 }
 
 footer a{
@@ -691,6 +619,14 @@ footer a:hover{
 
 }
 
+@media only screen and (max-width: 1110px){
+	  
+  #images{
+	display:inline-block;
+	max-width:900px;
+  }
+}
+
 @media screen and (max-width: 775px) {
 	.navigation a:not(:first-child){
 		display:none;
@@ -745,5 +681,6 @@ footer a:hover{
     display: block;
     text-align: left;
   }
+	
 
 }
