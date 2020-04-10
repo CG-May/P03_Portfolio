@@ -26,6 +26,11 @@ html{
 	margin:auto;
 }
 
+.singature{
+	text-align:right;
+}
+
+
 body {
    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
   padding: 2rem;
@@ -42,6 +47,14 @@ body {
 
 margin: auto;
 }
+
+ul{
+	text-align:center;
+	padding:10px;
+	list-style-position: inside;
+	/*https://stackoverflow.com/questions/28977320/how-do-i-get-the-bullet-points-of-a-ul-to-center-with-the-text/28977358*/
+}
+
 
 #title {
   display: flex;
@@ -341,9 +354,6 @@ a img:hover {
   /* margin:-1rem; */
 }
 
-div{
-	padding:1em;
-}
 
 #styleguide {
   padding-bottom: 2rem;
@@ -401,7 +411,7 @@ p{
 /*Used as guide: https://www.youtube.com/watch?v=opbtRRSHGnk*/
 
 .contact-div{
-	background: url('images/filter_image.PNG') no-repeat center;
+	background: url('../images/filter_image.png') no-repeat center;
 	background-size: cover;
 	padding:40x;
 }
