@@ -1,9 +1,8 @@
 body{
-	background-image:url('../images/filter_image.PNG');
+	background-image:url('../images/filter_image.png');
     background-attachment: fixed;
 	  -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-	position:center;
 }

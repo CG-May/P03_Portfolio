@@ -1,703 +1,515 @@
+* {
+box-sizing : border-box;
+margin : 0;
+padding : 0;
+}
+
 /*All references are commented into the CSS*/
 /*ALL IMAGES USED ARE MY OWN IMAGES except for 2:
 Coolors image from: https://coolors.co/export/png/f7f7f7-fce5e0-f37e67-c54b38-1e1117 
-Hamburger menu icon from https://kit.fontawesome.com/38b79869b2.js*/
+Hamburger menu icon from https://kit.fontawesome.com/38b79869b2.js
+Some CSS aspects used from P01 and P02
+CSS Validated file*/
 
-*{
-	box-sizing:border-box;
-	margin:0;
-	padding:0;
+/*Relevant references from P02: 
+<!--For how to sticky an element: https://www.w3schools.com/howto/howto_css_sticky_element.asp -->
+<!--For using float: https://stackoverflow.com/questions/2603700/how-to-align-3-divs-left-center-right-inside-another-div-->
+<!--For creating shadows: https://www.w3schools.com/css/css3_shadows.asp-->
+<!--For styling input boxes: https://css-tricks.com/styling-texty-inputs-only/-->
+<!--For importing google fonts: https://www.freecodecamp.org/news/how-to-use-google-fonts-in-your-next-web-design-project-e1ad48f1adfa/-->
+<!--For learning button styling elements: https://www.w3schools.com/w3css/w3css_buttons.asp-->*/
+
+figcaption {
+font-size : 0.75em;
+font-style : italic;
+text-align : center;
+padding : 10px;
 }
-
-figcaption{
-	font-size:0.75em;
-	font-style:italic;
-	text-align:center;
-	padding:10px;
+html, body {
+height : 100%;
 }
-
-html,body{
-	height:100%
+html {
+display : table;
+margin : auto;
 }
-
-html{
-	scroll-behavior: smooth;
-	display:table;
-	margin:auto;
+.signature {
+text-align : right;
 }
-
-.singature{
-	text-align:right;
-}
-
-
 body {
-   font-family: 'Open Sans', Arial, Helvetica, sans-serif;
-  padding: 2rem;
-  max-width: 110em;
-  margin: auto;
-    color: #1e1117;
-    background-color: #C54B38;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: cover;
-  /* https://www.w3schools.com/howto/howto_css_center_website.asp  & https://stackoverflow.com/questions/6464592/how-to-align-entire-html-body-to-the-center*/
-  vertical-align: middle ;
-  display:table-cell;
-
-margin: auto;
+font-family : 'Open Sans', Arial, Helvetica, sans-serif;  /*from Google fonts*/
+padding : 2rem;
+max-width : 110em;
+margin : auto;
+color : #1e1117;
+background-color : #C54B38;
+background-repeat : no-repeat;
+background-attachment : fixed;
+background-size : cover;
+vertical-align : middle;
+display : table-cell;
+margin : auto;
+ /* https://www.w3schools.com/howto/howto_css_center_website.asp  & https://stackoverflow.com/questions/6464592/how-to-align-entire-html-body-to-the-center*/
 }
-
-ul{
-	text-align:center;
-	padding:10px;
-	list-style-position: inside;
-	/*https://stackoverflow.com/questions/28977320/how-do-i-get-the-bullet-points-of-a-ul-to-center-with-the-text/28977358*/
-}
-
-
-#title {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  max-width: 100%;
-  align-items: baseline;
-  text-align: center;
-  margin-top: -2em;
-  margin-bottom: 1em;
-  border-bottom: solid 1px #dedddc;
-  padding-bottom: 10px;
-}
-
-
-h1 {
-  margin-bottom: 0.5rem;
-  font-size: 2.2rem;
-  text-align:center;
-	font-family:'Bitter', serif;
-	text-decoration:underline;
-}
-
-h2 {
-  margin-top: 1rem;
-  background-color: #f7f7f7;
-  border-radius: 20px;
-  border:1px solid #1e1117;
-  padding: 0.5em;
-  margin:1em;
-    text-align:center;
-	font-family:'Bitter', serif;
-}
-
-h3 {
-  font-style: italic;
-  margin-top: 1rem;
-    text-align:center;
-	font-family:'Bitter', serif;
-}
-
-h4 {
-  margin-left: 0.1em;
-  margin-bottom: 0.25rem;
-  font-size: 1.2rem;
-    text-align:center;
-	font-family:'Bitter', serif;
-}
-
-hr {
-  display: block;
-  overflow: hidden;
-  border-style: inset;
-  border-width: 1px;
-}
-
-
-img {
-  max-width:85%;
-}
-
-.content{
-	background-color:#FCE5E0;
-	margin:2em;
-	padding:2em;
-	border-radius:5px;
-	border:1px solid #1e1117;
-}
-
-.cusInput input[type="radio"] {
-  display: none;
-}
-
-[type="radio"]:checked+label,
-[type="radio"]:not(:checked)+label {
-  position: relative;
-  padding-left: 28px;
-  padding-bottom: 0.5em;
-  cursor: pointer;
-  line-height: 20px;
-  display: inline-block;
-  color: #1E1117;
-}
-
-[type="radio"]:checked+label:before,
-[type="radio"]:not(:checked)+label:before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 18px;
-  height: 18px;
-  border: 1px solid #1E1117;
-  border-radius: 100%;
-  background: #F7F7F7;
-}
-
-[type="radio"]:checked+label:after,
-[type="radio"]:not(:checked)+label:after {
-  content: '';
-  width: 12px;
-  height: 12px;
-  background: #AB9993;
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  border-radius: 100%;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-
-[type="radio"]:not(:checked)+label:after {
-  opacity: 0;
-  -webkit-transform: scale(0);
-  transform: scale(0);
-}
-
-[type="radio"]:checked+label:after {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
-
-form li {
-  list-style-type: none;
-}
-
-
-input[type=search] {
-  margin-bottom: 20px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
-
-/* reset type button */
-[type=reset] {
-  display: inline-block;
-  padding: 0.4rem;
-  color: white;
-  border-radius: 4px;
-  /*https://www.w3schools.com/howto/howto_css_round_buttons.asp */
-  background-color: rgb(48, 179, 169);
-  transition-property: background-color;
-  transition-duration: 0.3s;
-  text-decoration: none;
-}
-
-[type=reset]:hover {
-  background-color: rgb(240, 135, 94);
-  cursor: pointer;
-}
-
-/*------- CLASSES -------*/
-.button, [type=submit] {
-float:right;
-  display: inline-block;
-  padding: 0.4rem;
-  color: white;
-  border-radius: 4px;
-  background-color: #1e1117;
-  border: none;
-  transition-property: #F37E67;
-  transition-duration: 0.3s;
-  text-decoration: none;
-}
-
-.button:hover, [type=submit]:hover {
-  background-color: #F37E67;
-  cursor: pointer;
-}
-
-.button:focus, [type=submit]:focus{
-  background-color:  #FCE5E0;
-  color: #1E1117;
-}
-
-.button:active, [type=submit]:active {
-  background-color: #F7F7F7;
-}
-
-.row {
-  display: -ms-flexbox; /* IE 10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE 10 */
-  flex-wrap: wrap;
-  padding: 0 4px;
-
-}
-
-/* Create two equal columns that sits next to each other */
-.column {
-
-  -ms-flex: 50%; /* IE 10 */
-  flex: 50%;
-  padding: 0 4px;
-}
-
-.column img {
-  margin-top: 8px;
-  vertical-align: middle;
-}
-
-#focused {
-  background-color: #AB9993;
-}
-
 ul {
-  color: black;
+text-align : center;
+padding : 10px;
+list-style-position : inside;
+/*https://stackoverflow.com/questions/28977320/how-do-i-get-the-bullet-points-of-a-ul-to-center-with-the-text/28977358*/
+}
+#title {
+display : flex;
+flex-wrap : wrap;
+flex-direction : row;
+max-width : 100%;
+align-items : baseline;
+text-align : center;
+margin-top : -2em;
+margin-bottom : 1em;
+border-bottom : 1px solid #dedddc;
+padding-bottom : 10px;
+}
+h1 {
+margin-bottom : 0.5rem;
+font-size : 2.2rem;
+text-align : center;
+font-family : 'Bitter', serif;
+text-decoration : underline;
+}
+h2 {
+margin-top : 1rem;
+background-color : #f7f7f7;
+border-radius : 20px;
+border : #1e1117 solid 1px;
+padding : 0.5em;
+margin : 1em;
+text-align : center;
+font-family : 'Bitter', serif;
+}
+h3 {
+font-style : italic;
+margin-top : 1rem;
+text-align : center;
+font-family : 'Bitter', serif;
+}
+h4 {
+margin-left : 0.1em;
+margin-bottom : 0.25rem;
+font-size : 1.2rem;
+text-align : center;
+font-family : 'Bitter', serif;
+}
+hr {
+	/*https://www.w3schools.com/tags/tag_hr.asp, for styling the style guide*/
+display : block;
+overflow : hidden;
+border-style : inset;
+border-width : 1px;
+}
+img {
+max-width : 85%;
+}
+.content {
+background-color : #FCE5E0;
+margin : 2em;
+padding : 2em;
+border-radius : 5px;
+border : #1e1117 solid 1px;
+}
+.cusInput input[type="radio"] {
+display : none;
+}
+[type="radio"]:checked + label, [type="radio"]:not(:checked) + label {
+position : relative;
+padding-left : 28px;
+padding-bottom : 0.5em;
+cursor : pointer;
+line-height : 20px;
+display : inline-block;
+color : #1E1117;
+}
+[type="radio"]:checked + label:before, [type="radio"]:not(:checked) + label:before {
+content : '';
+position : absolute;
+left : 0;
+top : 0;
+width : 18px;
+height : 18px;
+border : #1E1117 solid 1px;
+border-radius : 100%;
+background : #F7F7F7;
+}
+[type="radio"]:checked + label:after, [type="radio"]:not(:checked) + label:after {
+content : '';
+width : 12px;
+height : 12px;
+background : #AB9993;
+position : absolute;
+top : 4px;
+left : 4px;
+border-radius : 100%;
+transition : all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+opacity : 0;
+transform : scale(0);
+}
+[type="radio"]:checked + label:after {
+opacity : 1;
+transform : scale(1);
+}
+form li {
+list-style-type : none;
+}
+input[type="search"] {
+margin-bottom : 20px;
+padding : 12px;
+border : #ccc solid 1px;
+border-radius : 3px;
+}
+[type="reset"] {
+	  /*https://www.w3schools.com/howto/howto_css_round_buttons.asp */
+display : inline-block;
+padding : 0.4rem;
+color : white;
+border-radius : 4px;
+background-color : rgb(48, 179, 169);
+transition-property : background-color;
+transition-duration : 0.3s;
+text-decoration : none;
+}
+[type="reset"]:hover {
+background-color : rgb(240, 135, 94);
+cursor : pointer;
+}
+.button, [type="submit"] {
+float : right;
+display : inline-block;
+padding : 0.4rem;
+color : white;
+border-radius : 4px;
+background-color : #1e1117;
+border : none;
+transition-duration : 0.3s;
+text-decoration : none;
+}
+.button:hover, [type="submit"]:hover {
+background-color : #F37E67;
+cursor : pointer;
+}
+.button:focus, [type="submit"]:focus {
+background-color : #FCE5E0;
+color : #1E1117;
+}
+.button:active, [type="submit"]:active {
+background-color : #F7F7F7;
+}
+.row {
+	flex-direction : column-reverse;
+display : flex;
+flex-wrap : wrap;
+padding : 0 4px;
+}
+/*https://www.w3schools.com/howto/howto_css_two_columns.asp*/
+.column {
+flex : 50%;
+padding : 0 4px;
+}
+.column img {
+margin-top : 8px;
+vertical-align : middle;
+}
+#focused {
+background-color : #AB9993;
 }
 
 a {
-  color: #F37E67;
+color : #F37E67;
 }
-
 a:hover {
-  color: #1E1117;
+color : #1E1117;
 }
-
 a:focus {
-  background-color: #1E1117;
-  border-radius:10px
-}
-
-
-.subsections {
-  padding: 2em;
-  border-color: grey;
-  border-radius: 5px;
-  border-style: solid;
+background-color : #1E1117;
+border-radius : 10px;
 }
 
 a img:hover {
-  border: 5px solid rgb(240, 135, 94);
-  border-radius: 5px;
-}
-
-/* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
-.reviews {
-  margin-top: 2em;
-  border-color: grey;
-  border-radius: 10px;
-  border-style: solid;
-}
-
-.productdetail {
-  /* text-align: center; */
-}
-
-.stretch {
-  width: 100%;
-  display: inline-block;
-  font-size: 0;
-  line-height: 0;
-}
-
-#box1 {
-  background: #0AAD8F;
-}
-
-#box2 {
-  background: #C8FEF7;
-}
-
-#box3 {
-  background: #97F5E7;
-}
-
-#box4 {
-  background: #AB9993;
-}
-
-#box5 {
-  background: #F0875E;
-}
-
-/*IDs*/
-#productbrowsingpage {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  max-width: 100%;
-  justify-content: flex-start;
+border : rgb(240, 135, 94) solid 5px;
+border-radius : 5px;
 }
 
 #tableofcontents {
-  margin: .5em;
-  padding: 2em;
-  border: 2px solid #1e1117;
-  border-radius: 10px;
-  float: left;
-  background-color: #FCE5E0;
+margin : 0.5em;
+padding : 2em;
+border : #1e1117 solid 2px;
+border-radius : 10px;
+float : left;
+background-color : #FCE5E0;
 }
-
 #title h1 {
-  font-size: 2em;
-  /* margin:-1rem; */
+font-size : 2em;
 }
-
-
 #styleguide {
-  padding-bottom: 2rem;
-  border-top-width: 0.15rem;
-  border-top-style: solid;
-  border-top-color: black;
+padding-bottom : 2rem;
+border-top-width : 0.15rem;
+border-top-style : solid;
+border-top-color : black;
 }
-
-
 #home div {
-  padding-bottom: 2rem;
-  border-top-width: 0.15rem;
-  border-top-style: solid;
-  border-top-color: black;
-    display:block;
+padding-bottom : 2rem;
+border-top-width : 0.15rem;
+border-top-style : solid;
+border-top-color : black;
+display : block;
 }
-
-/*classes*/
-
 .container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  flex-basis: 15em;
-  max-width: 100%;
-  justify-content: flex-start;
-  padding: 5px 20px 15px 20px;
+display : flex;
+flex-wrap : wrap;
+flex-direction : row;
+flex-basis : 15em;
+max-width : 100%;
+justify-content : flex-start;
+padding : 5px 20px 15px 20px;
 }
-
 .container #tableofcontents {
-  flex-basis: 25em;
-  flex-grow: 1;
-  justify-content: flex-start;
-  max-width: 25em;
-  transition-property: background-color;
-  transition-duration: 0.5s;
+flex-basis : 25em;
+flex-grow : 1;
+justify-content : flex-start;
+max-width : 25em;
+transition-property : background-color;
+transition-duration : 0.5s;
 }
-
 .container #styleguide {
-  flex-basis: 15em;
-  flex-grow: 1;
-  justify-content: flex-start;
-  margin: .5em;
-  margin-left: 3em;
-  padding: 1em;
+flex-basis : 15em;
+flex-grow : 1;
+justify-content : flex-start;
+margin : 0.5em;
+margin-left : 3em;
+padding : 1em;
 }
-
-
-p{
-	padding:10px;
+p {
+padding : 10px;
 }
-
-
 
 /*Used as guide: https://www.youtube.com/watch?v=opbtRRSHGnk*/
-
-.contact-div{
-	background: url('../images/filter_image.png') no-repeat center;
-	background-size: cover;
-	padding:40x;
+.contact-div {
+background : url("filter_image.png") center no-repeat;
+background-size : cover;
 }
-
-.contact-div h1{
-	text-align:center;
-		background-color: #FCE5E0;
+.contact-div h1 {
+text-align : center;
+background-color : #FCE5E0;
 }
-
-.divider{
-	width:100px;
-	height:10px;
-	background: #C54B38;
-	margin: 40px auto;
+.divider {
+width : 100px;
+height : 10px;
+background : #C54B38;
+margin : 40px auto;
 }
-
-.contact-form{
-	max-width:600px;
-	margin:auto;
-	padding: 0 10px;
-	overflow: hidden;
+.contact-form {
+max-width : 600px;
+margin : auto;
+padding : 0 10px;
+overflow : hidden;
 }
-
-.contact-form-text{
-	display: block;
-	width:100%;
-	box-sizing:border-box;
-	margin:16px 0;
-	border: 0;
-	background-color: #1e1117;
-	padding:20px 40px;
-	outline:none;
-	color: #F7F7F7;
-	transition: 0.5;
+.contact-form-text {
+display : block;
+width : 100%;
+box-sizing : border-box;
+margin : 16px 0;
+border : 0;
+background-color : #1e1117;
+padding : 20px 40px;
+outline : none;
+color : #F7F7F7;
 }
-
-.contact-form-text:focus{
-	box-shadow: 0 0 10px 4px #C54B38;
+.contact-form-text:focus {
+box-shadow : 0 0 10px 4px #C54B38;
 }
-
-textarea.contact-form-text{
-	resize:none;
-	height:120px;
+textarea.contact-form-text {
+resize : none;
+height : 120px;
 }
-
-.contact-form-button{
-	float:center;
-	border:0;
-	background-color:#C54B38;
-	color:#F7F7F7;
-	padding: 12px 50px;
-	border-radius: 20px;
-	cursor: pointer;
-	transition: 0.5s;
+.contact-form-button {
+border : 0;
+background-color : #C54B38;
+color : #F7F7F7;
+padding : 12px 50px;
+border-radius : 20px;
+cursor : pointer;
+transition : 0.5s;
 }
-
-.contact-form-button.hover{
-	background-color:#FCE5E0;
-	color:#1e1117;
+.contact-form-button.hover {
+background-color : #FCE5E0;
+color : #1e1117;
 }
-
-
-
-.row {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  margin: 0 -16px;
-}
-
-
 
 .btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px;
-  margin: 10px 0;
-  border: none;
-  width: 100%;
-  border-radius: 3px;
-  cursor: pointer;
-  font-size: 17px;
+background-color : #4CAF50;
+color : white;
+padding : 12px;
+margin : 10px 0;
+border : none;
+width : 100%;
+border-radius : 3px;
+cursor : pointer;
+font-size : 17px;
 }
-
 .btn:hover {
-  background-color: #45a049;
+background-color : #45a049;
 }
-
-nav{
-  display:flex;
-  flex-direction:row;
-  justify-content:space-around;
-  flex-basis:10em;
-  flex-wrap:wrap;
-  width:100%;
-  top:0;
-  z-index:1;
+nav {
+display : flex;
+flex-direction : row;
+justify-content : space-around;
+flex-basis : 10em;
+flex-wrap : wrap;
+width : 100%;
+top : 0;
+z-index : 1;
 }
-
 .navigation {
-  overflow: hidden;
-  background-color: #1e1117;
-  color: #F7F7F7;
-  border: 1px solid  #1e1117;
+overflow : hidden;
+background-color : #1e1117;
+color : #F7F7F7;
+border : #1e1117 solid 1px;
 }
-
-.navigation .hamburger{
-	display:none;
+.navigation .hamburger {
+display : none;
 }
-
-/* Style the topnav links */
 .navigation a {
-  float: left;
-  display: block;
-  color: #F7F7F7;
-  text-align: center;
-  padding: 1rem;
-  text-decoration: none;
-  border: 1px solid  #1e1117;
+float : left;
+display : block;
+color : #F7F7F7;
+text-align : center;
+padding : 1rem;
+text-decoration : none;
+border : #1e1117 solid 1px;
 }
-
-/* Change color on hover */
 .navigation a:hover {
-  background-color: #FCE5E0;
-  color: #1e1117;
-  border: 1px solid  #1e1117;
+background-color : #FCE5E0;
+color : #1e1117;
+border : #1e1117 solid 1px;
 }
-
-.navigation a:hover, .dropdown:hover .dropbtn{
-	background-color: #FCE5E0;
-	border-radius:1em;
-	color:#F7F7F7;
+.navigation a:hover, .dropdown:hover .dropbtn {
+background-color : #FCE5E0;
+border-radius : 1em;
+color : #F7F7F7;
 }
-
-.dropdown:hover .dropdown-content{
-	display:block;
+.dropdown:hover .dropdown-content {
+display : block;
 }
-
-#images{
-	display:flex;
-	justify-content:space-around;
-	width:300px;
+#images {
+display : flex;
+justify-content : space-around;
+width : 300px;
 }
-
-footer{
-	position: static;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background-color: #F37E67;
-    color: #F7F7F7;
-    text-align: center;
-	margin:1em;
-    padding: 1em;
-	border:solid 1px #1e1117;
+footer {
+position : static;
+left : 0;
+bottom : 0;
+width : 100%;
+background-color : #F37E67;
+color : #F7F7F7;
+text-align : center;
+margin : 1em;
+padding : 1em;
+border : #1e1117 solid 1px;
 }
-
-footer a{
-	color:#1e1117;
+footer a {
+color : #1e1117;
 }
-
-footer a:hover{
-	color:#FCE5E0;
+footer a:hover {
+color : #FCE5E0;
 }
-
-/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (and change the direction - make the "cart" column go on top) */
 @media only screen and (max-width: 768px) {
-  body {
-    font-size: 20px;
-  }
-
-  .container {
-    padding: 0em;
-    margin: 0em;
-  }
-  .container #addressinfo, .container #cardinfo {
-    margin: 0em;
-  }
-
-  .row {
-    flex-direction: column-reverse;
-  }
-
-  .col-25 {
-    margin-bottom: 20px;
-  }
-
-  nav a {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
-
-  .fa-quote-left {
-    padding-right: 8px;
-  }
-
-  #homepage {
-    margin-left: 0em;
-    margin-right: 0em;
-  }
-
-  #homepage ol {
-    margin-left: 1rem;
-    margin-right: 1rem;
-  }
-
-  button {
-    font-size:20px;
-  }
+body {
+font-size : 20px;
+}
+.container {
+padding : 0;
+margin : 0;
+}
+.container #addressinfo, .container #cardinfo {
+margin : 0;
 }
 
+nav a {
+font-size : 20px;
+margin-bottom : 10px;
+}
+
+#homepage {
+margin-left : 0;
+margin-right : 0;
+}
+#homepage ol {
+margin-left : 1rem;
+margin-right : 1rem;
+}
+button {
+font-size : 20px;
+}
+}
 @media only screen and (max-width: 375px) {
-	.item{
-		width: 80%;
-	}
-
-	img{
-		width: 80%;
-	}
-
-
+.item {
+width : 80%;
 }
-
-@media only screen and (max-width: 1110px){
-	  
-  #images{
-	display:inline-block;
-	max-width:900px;
-  }
+img {
+width : 80%;
 }
-
+}
+@media only screen and (max-width: 1110px) {
+#images {
+display : inline-block;
+max-width : 900px;
+}
+}
 @media screen and (max-width: 775px) {
-	.navigation a:not(:first-child){
-		display:none;
-		right:0;
-		left:0;
-	}
-	
-	.navigation a.hamburger{
-		text-align:left;
-		width:100%;
-		margin:auto;
-		display:flex;
-		position:relative;
-		justify-content:flex-end;
-		color:#F7F7F7;
-	}
-	
-	nav{
-		display:flex;
-		flex-direction:column;
-		justify-content:flex-start;
-		background-color:#1e1117;
-		width:100%;
-		top:0;
-		z-index:0;
-		padding:0.1rem;
-	}
-	
-	.navigation{
-		margin-top:1em;
-		overflow:hidden;
-		background-color:#1e1117;
-	}
-	
-	.navigation a{
-		color:#F7F7F7;
-	}
-	
-  .navigation.responsive {
-    position: relative;
-  }
-  
-  .navigation.responive .icon{
-	  border-width:0px;
-	  position:absolute;
-	  right:0;
-	  top:0;
-  }
-
-  .navigation.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-	
-
+.navigation a:not(:first-child) {
+display : none;
+right : 0;
+left : 0;
+}
+.navigation a.hamburger {
+text-align : left;
+width : 100%;
+margin : auto;
+display : flex;
+position : relative;
+justify-content : flex-end;
+color : #F7F7F7;
+}
+nav {
+display : flex;
+flex-direction : column;
+justify-content : flex-start;
+background-color : #1e1117;
+width : 100%;
+top : 0;
+z-index : 0;
+padding : 0.1rem;
+}
+.navigation {
+margin-top : 1em;
+overflow : hidden;
+background-color : #1e1117;
+}
+.navigation a {
+color : #F7F7F7;
+}
+.navigation.responsive {
+position : relative;
+}
+.navigation.responive .icon {
+border-width : 0;
+position : absolute;
+right : 0;
+top : 0;
+}
+.navigation.responsive a {
+float : none;
+display : block;
+text-align : left;
+}
 }
