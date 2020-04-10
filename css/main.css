@@ -166,21 +166,7 @@ padding : 12px;
 border : #ccc solid 1px;
 border-radius : 3px;
 }
-[type="reset"] {
-	  /*https://www.w3schools.com/howto/howto_css_round_buttons.asp */
-display : inline-block;
-padding : 0.4rem;
-color : white;
-border-radius : 4px;
-background-color : rgb(48, 179, 169);
-transition-property : background-color;
-transition-duration : 0.3s;
-text-decoration : none;
-}
-[type="reset"]:hover {
-background-color : rgb(240, 135, 94);
-cursor : pointer;
-}
+
 .button, [type="submit"] {
 float : right;
 display : inline-block;
@@ -203,20 +189,28 @@ color : #1E1117;
 .button:active, [type="submit"]:active {
 background-color : #F7F7F7;
 }
-.row {
-	flex-direction : column-reverse;
-display : flex;
-flex-wrap : wrap;
-padding : 0 4px;
-}
+
 /*https://www.w3schools.com/howto/howto_css_two_columns.asp*/
-.column {
-flex : 50%;
-padding : 0 4px;
+.row {
+  display: -ms-flexbox; /* IE 10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE 10 */
+  flex-wrap: wrap;
+  padding: 0 4px;
+
 }
+
+/* Create two equal columns that sits next to each other */
+.column {
+
+  -ms-flex: 50%; /* IE 10 */
+  flex: 50%;
+  padding: 0 4px;
+}
+
 .column img {
-margin-top : 8px;
-vertical-align : middle;
+  margin-top: 8px;
+  vertical-align: middle;
 }
 #focused {
 background-color : #AB9993;
@@ -430,6 +424,10 @@ font-size : 20px;
 padding : 0;
 margin : 0;
 }
+.row {
+    flex-direction: column-reverse;
+  }
+
 .container #addressinfo, .container #cardinfo {
 margin : 0;
 }
