@@ -9,6 +9,13 @@ Hamburger menu icon from https://kit.fontawesome.com/38b79869b2.js*/
 	padding:0;
 }
 
+figcaption{
+	font-size:0.75em;
+	font-style:italic;
+	text-align:center;
+	padding:10px;
+}
+
 html,body{
 	height:100%
 }
