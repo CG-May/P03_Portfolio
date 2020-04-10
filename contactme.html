@@ -6,18 +6,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Contact Form HTML/CSS Template - reusable form</title>
         <link rel="stylesheet" href="css/main.css" >
+			<link rel="stylesheet" type="text/css" href="css\normalize.css">
+	<link rel="stylesheet" type="text/css" href="css\navigation.css">
+	<link rel="stylesheet" type="text/css" href="css\background-image.css">
         <script src="form.js"></script>
     </head>
     <body >
+	<script src="js\script.js"></script>
 			<header>
-          <nav class="navigation">
-            <a class="button" href="index.html">Home</a>
-            <a class="button" href="project1.html">Photography Project</a>
-            <a class="button" href="project2.html">Key Grip Project</a>
-			<a class="button" href="contactme.html">Contact Me</a>
-          </nav>
+          <div class="topnav" id="myTopnav">
+  <a href="index.html" class="active">Home</a>
+  <a href="project1.html">Photography Project</a>
+  <a href="project2.html">Short Film Project</a>
+  <a href="contactme.html">Contact Me!</a>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
 		</header>
-		<div class="contact-div">
+			<section class="content">
 			<h1>Contact Me Here!</h1>
 			<div class="divider"></div>
 			<form class="contact-form" method="post">
@@ -26,8 +33,7 @@
 				<textarea class="contact-form-text" placeholder="Your Message"></textarea>
 				<input type="submit" class="button" value="Send!">
 
-			</form>
-		</div>
+		</section>
         <!-- <div class="container"> -->
             <!-- <div id="form-main"> -->
                 <!-- <div id="form-div"> -->

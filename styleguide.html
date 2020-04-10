@@ -10,6 +10,8 @@
   <script src="https://kit.fontawesome.com/38b79869b2.js" crossorigin="anonymous"></script>
   <!--link css page-->
   <link href="css/main.css" rel="stylesheet">
+  	<link rel="stylesheet" type="text/css" href="css\normalize.css">
+	<link rel="stylesheet" type="text/css" href="css\navigation.css">
 </head>
 
 <body>
@@ -151,16 +153,16 @@
         <div id="navlink">
           <h2>NAVIGATION LINK</h2>
           <p>The general navigation link will look like this:</p>
-          <nav class="navigation">
-            <a class="button" href="styleguide.html">Style Guide Webpage</a>
-          </nav>
           <p>The navigation bar itself will look like this (as featured on the top of the page):</p>
-          <nav class="navigation">
-            <a class="button" href="index.html">Home</a>
-            <a class="button" href="project1.html">Photography Project</a>
-            <a class="button" href="project2.html">Key Grip Project</a>
-			<a class="button" href="contactme.html">Contact Me</a>
-          </nav>
+			<div class="topnav" id="myTopnav">
+			  <a href="index.html" class="active">Home</a>
+			  <a href="project1.html">Photography Project</a>
+			  <a href="project2.html">Short Film Project</a>
+			  <a href="contactme.html">Contact Me!</a>
+			  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+				<i class="fa fa-bars"></i>
+			  </a>
+			</div>
         </div>
 				  
 		 <div id="gallery">
