@@ -1,123 +1,200 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-	<head>
-	<title>Portfolio Style Guide</title>
-	<meta charset="UTF-8">
-	<link rel="stylesheet" type="text/css" href="css\main.css">
-	</head>
-	<body>
-	<script src="js\script.js"></script>
-		<header>
-			<h1>Portfolio Style Guide</h1>
-		</header>
-		<aside class="index">
-			<h2>Table of Contents</h2>
-			<h3>Colour Pallete</h3>
 
-			<h3>Text Styling</h3>
-				<ul>
-					<li href="headings">Headings</li>
-					<li href="paragraphs">Paragraphs</li>
-					<li href="lists">Lists</li>
-				</ul>
-			<h3>Interactive Elements</h3>
-				<ul>
-					<li href="">In-Text Links</li>
-					<li href="">Navigation Link</li>
-					<li href="">Basic Buttons</li>
-					<li href="">Radio Buttons</li>
-					<li href="">Text Field</li>
-					<li href="">Images</li>
-				</ul>
-			<h3>Combined Elements</h3>
-				<ul>
-					<li href="">Main Navigation</li>
-					<li href="">Contact Form</li>
-					<li href="">Gallery</li>
-				</ul>
-			<h3>Biography</h3>
-				<ul>
-					<li href="">About me</li>
-				</ul>
-			<h3>Process Analysis</h3>
-				<ul>
-					<li href="">Project 1</li>
-					<li href="">Project 2</li>
-				</ul>
-		</aside>
-		<div id="styleguide">
-			<section id="intro">
-				<p>Welcome! This is the style guide for my website!</p>
-				<p>All of the html elements, text content, images and more featured in the portfolio are showcased here.</p>
-			</section>
-			<section id="textstyling">
-				<h2>Text Styling</h2>
-				<section id="headings">
-					<h1>Heading 1</h1>
-					<h2>Heading 2</h2>
-					<h3>Heading 3</h3>
-					<h4>Heading 4</h4>
-				</section>
-				<section id="paragraphs">
-					<p>This is a paragraph!</p>
-				</section>
-				<section id="lists">
-					<ul>
-						<li>I am an unordered list</li>
-						<li>Used for listing basic points and organizing contents</li>
-					</ul>
-					<ol>
-						<li>I am an ordered list</li>
-						<li>Used for organizing content in a specific order</li>
-					</ol>
-				</section>
-			</section>
-			<section id="interactiveelements">
-				<section id="intextlinks">
-					<p>This is what an <a href="">in-text link will look like</a> when within a paragraph</a>
-				</section>
-				<section id="navlink">
-					<nav class="nav">
-						<a class="navbutton" href="">Nav Link A</a>
-					</nav>
-				</section>
-				<section id="buttons">
-					<p>This is a regular button
-						<button class="button" type="button">Button</button>
-					</p>
-					<p>This is a regular button
-						<button class="button" type="submit">Submit</button>
-					</p>
-					<p>This is a regular button
-						<button class="button" type="reset">Reset</button>
-					</p>
-				</section>
-				<section id="radiobuttons">
-					<input type="radio" class="radio">
-					<label>This is a label for a radio button</label>
-				</section>
-				<section id="images">	
-					<img src="">
-				</section>
-				</section id="combinedelements">
-					<section id="navlinks">
-						<nav class="nav">
-							<a class="navbutton" href="index.html">Home</a>
-							<a class="navbutton" href="project1.html">Photography Project</a>
-							<a class="navbutton" href="project2.html">Key Grip Project</a>
-							<a class="navbutton" href="bio.html">Biography</a>
-							<a class="navbutton" href="aboutme.html">Contact Me</a>
-						</nav>
-					</section>
-					<section id="contactme">
-						<div class="container">
-							
-					</section>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Style Guide for Cascading Sheets</title>
+  <!-- Icons for the website from fontawesome.com, to use icons such as credit cards, address cards, etc -->
+  <script src="https://kit.fontawesome.com/38b79869b2.js" crossorigin="anonymous"></script>
+  <!--link css page-->
+  <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body>
+  <!--Top of the body-->
+  <header id="title">
+    <!--Title of page-->
+    <div id="logo">
+      <h1>Portfolio Style Guide</h1>
+    </div>
+    <!--navigation between pages-->
+  </header>
+  <!--left side of page for each part of the style guide, static-->
+  <div class="container">
+    <div id="tableofcontents" class="in-text_links">
+      <div id="tableofcontentsstyling">
+        <h2>Index For Style Guide</h2>
+        <h3>Basic Style Guide Elements</h3>
+        <ul>
+          <li><a href="#headings">Headings</a></li>
+          <li><a href="#paragraphs">Paragraphs</a></li>
+          <li><a href="#numberedlist">Numbered Lists</a></li>
+          <li><a href="#unorderedlist">Unordered Lists</a></li>
+          <li><a href="#button">Buttons</a></li>
+          <li><a href="#label">Label</a></li>
+          <li><a href="#input">Input Field</a></li>
+          <li><a href="#radio">Radio Button</a></li>
+          <li><a href="#image">Image</a></li>
+          <li><a href="#in-text_link">In-Text Link</a></li>
+          <li><a href="#navlink">Navigation Link</a></li>
+		  <li><a href="#gallery">Image Gallery</a></li>
+		  <li><a href="#contactform">Contact Form</a></li>
+
+        </ul>
+        <h3>Colour Scheme</h3>
+        <img src="images/colorPallete.png" alt="color pallete of the website">
+		<h3>Biography</h3>
+		<p>I am a passionate digital design student, artist, sketcher and photographer. I love experimenting and growing my skills in various different mediums, from programming to graphic layouts to video editing to web design! My professional and personal passions overlap quite a bit: I enjoy hiking in the outdoors taking photographs and listening to the sounds of nature, sketching a variety of different subjects from cartoons to more intricate patterns, and writing stories and ideating different stories and characters. I am hardworking, energetic, and colourful, and always wish to represent my personality in the work I do.</p>
+					  <p>Overall, I am open to a wide variety of different professions as my skillset is very adaptable and easily molded to any task I need to undergo. I can easily hold up the backbone of a project or be the front runner of the projects leadership role. I am most drawn to a career in photography. I believe with my technical knowledge of the inner workings of cameras, editing photos and setting up equipment needed for a shoot, combined with my design knowledge of colour, layouts and harmony would lend very well in this type of career. I really wish to put myself out there and be a worker than any person, group, or company can rely on.</p>
+		<h3>First Project Process Analysis</h3>
+		  <p>Out of all the courses I've taken, it surprised me how much I enjoyed photography. Even after finishing my projects for the course Digital Photography, I still find myself passionately taking pictures of everything I can. Even if my image quality isn't the greatest, as my main camera is an iPhone 7, I enjoy seeing what I can create and document. </p>
+
+	<p>The final project for this course was for ourselves to select 20 of our best images we took during the semester, and present them in a final portfolio. However, not only did these images have to be first accepted by our own peers, but by our professor as well. With over 100+ images taken this would seem easy, but as Malcolm Gladwell said, in order to stand out among others is "ten thousand hours of practice is required" (Outliers: The Story of Success, pg 40). For myself not even hitting 50 hours of practice shooting and editing, my work was quite mediocre. </p>
+
+	<p>In order to elevate my work up to the level that was needed, I reviewed the images I had currently produced and asked for feedback from my peers about what was working and what needed to be revised. I also reviewed the various photography concepts we were taught as well as images that embodied those concepts perfectly, and why those images were more effective than mine. Doing this review process made my final images more refined and polished than they were earlier on in the course.</p>
+
+	<p>Another challenge was making sure my portfolio had a large variety. While not specified for this project, as an artist I take pride in having a wide variety of polished skills over having one polished skill. While I have many images of textures, close-up shots, birds and landscapes, I knew I had to branch out and experiment more. This lead to some of my more interesting images involving more heavy manipulation, different types of lenses and even more odd methods of picture taking such as taking images with scanners, and many more techniques that were a bit more unconventional. This strategy was a success as while not all my images were perfect, all of them were unique and I feel showcased my personality as a photographer quite well.</p>
+
+	<p>In the end, this is an experience I treasure and wish to do many more projects similar to this in the future.</p>
+
+		<h3>Second Project Process Analysis</h3>
+		    <p>In the fall 2018 semester at Simon Fraser University, my course in film tasked myself and my group with producing a short film. Our group designed the setting, script, recruited the actors, reserved the sets for shooting and, for my task, organizing and transporting the productions equipment.</p>
+
+<p>The main challenge I encountered with providing my group with the equipment needed was how much in general was needed. Transporting lights, camera, tripods, microphones and audio recorders, reflectors and more was not a feasible feat alone. Not only that, but due to other groups also needing this equipment, I had to stay on my toes keeping our equipment booked and available for our team members to use. In order to tackle these issues, I made myself a schedule for when to book the equipment, when to return it, and when to schedule transportation to the film sets. This helped me keep my thoughts organized, as well as add to the list of any new equipment we needed as the production went along. I asked my team members for assistance when transporting the equipment as they had access to larger vehicles that I did not have access to. Overall, keeping a clear schedule and communicating well with my group lead us to having no issues whatsoever on the equipment end of the project, and filming days went very smooth as a result.</p>
+  
+		<p></p>
+      </div>
+    </div>
+    <!--Top of the style guide-->
+    <div id="styleguide">
+
+      <!--right side of page for each part of the style guide, continues to the bottom-->
+      <section id="basicstyleguide">
+        <h1>BASIC STYLE GUIDE ELEMENTS</h1>
+        <div id="headings">
+          <h2>HEADINGS</h2>
+          <!--Headings section-->
+          <h1>I'm a H1 Heading</h1>
+          <h2>I'm a H2 Heading</h2>
+          <h3>I'm a H3 Heading</h3>
+          <h4>I'm a H4 Heading</h4>
+        </div>
+        <div id="paragraphs">
+          <h2>PARAGRAPHS</h2>
+          <!--Paragraphs section-->
+          <p>This is what a generic paragraph would look like</p>
+          <p>This is what a paragraph with <strong>bolded text</strong> would look like.</p>
+          <p>This is what a paragraph with <em>italicized text</em> would look like </p>
+        </div>
+        <div id="numberedlist">
+          <h2>NUMBERED LISTS</h2>
+          <ol>
+            <li>Make sure the most important piece of information is at the top!</li>
+            <li>Information that enhances first piece</li>
+            <li>And other little bonuses to follow</li>
+          </ol>
+        </div>
+        <div id="unorderedlist">
+          <h2>BULLET POINT LISTS</h2>
+          <ul>
+            <li>To keep information organized that doesn't need to be in a specific order</li>
+            <li>Also used to organize a large group of similar objects</li>
+            <li>Makes it easier to read!</li>
+          </ul>
+        </div>
+        <div id="button">
+          <h2>BUTTONS</h2>
+          <p>
+            This is a submit button! <button class="button" type="submit" value="Submit">Submit!</button>
+          </p>
+          <p>Use it for forms for customers to submit their data</p>
+          <p>
+            This is a reset button! <button class="button" type="reset" value="Reset">Reset!</button>
+          </p>
+          <p>Use it for forms for customers to reset the data they have inputted</p>
+          <p>
+            This is a basic button! <button class="button" type="button" value="Button">Button!</button>
+          </p>
+          <p>Used for various types of decoration and formatting</p>
+        </div>
+        <div id="label">
+          <h2>LABEL</h2>
+          <label>Label:</label>
+          <p>Used in front of input tags or buttons to add context to the other element.
+        </div>
+        <div id="input">
+          <h2>INPUT BOX</h2>
+          <input type="text">
+          <p>Used for the customer to type in information</p>
+        </div>
+        <div id="radio">
+          <h2>RADIO BUTTONS</h2>
+          <form action="index.html" class="cusInput">
+            <p><input type="radio" name="example" id="ex1" value="ex1" checked>
+              <label for="ex1">Example 1</label></p>
+            <p><input type="radio" name="example" id="ex2" value="ex2">
+              <label for="ex2">Example 2</label></p>
+          </form>
+        </div>
+        <div id="image">
+          <h2>IMAGES</h2>
+          <img src="images/exampleimage.PNG" alt="drawing of myself!">
+		  <figcaption>Hi it's me!</figcaption>
+          <p>General layout for all images (size, border, etc)</p>
+        </div>
+        <div class="in-text_links">
+          <h2>IN-TEXT LINK</h2>
+          <p>If a link is in the middle of a paragraph, it will be shown <a href="#tableofcontents">like this</a> and will take you to another page</p>
+        </div>
+        <div id="navlink">
+          <h2>NAVIGATION LINK</h2>
+          <p>The general navigation link will look like this:</p>
+          <nav class="navigation">
+            <a class="button" href="styleguide.html">Style Guide Webpage</a>
+          </nav>
+          <p>The navigation bar itself will look like this (as featured on the top of the page):</p>
+          <nav class="navigation">
+            <a class="button" href="index.html">Home</a>
+            <a class="button" href="project1.html">Photography Project</a>
+            <a class="button" href="project2.html">Key Grip Project</a>
+			<a class="button" href="contactme.html">Contact Me</a>
+          </nav>
+        </div>
+				  
+		 <div id="gallery">
+         <h2>IMAGE GALLERY</h2>
+		 <div class="row">
+			  <div class="column">
+				<img class="display" src="images/centered_flower.jpg" >
+				<img class="display" src="images/closeup_rope.jpg" >
+				<img class="display" src="images/ferry_sailing_away.jpg" >
+				</div>
+			  <div class="column">
+				<img class="display" src="images/filter_flower.PNG" >
+				<img class="display" src="images/shattered_glass.jpg" >
+				<img class="display" src="images/social_doc.jpg" >
 				</div>
 			</div>
-		<footer>
-			<p>The main website can be accessed <a href="index.html">here</a></p>
-			<p>The Git Repository can be accessed <a href="https://github.com/CG-May/P03_Portfolio.git">here</a></p>
-		</footer>
-	</body>
+        </div>
+		
+		 <div id="paragraphs">
+          <h2>CONTACT FORM</h2>
+        </div>
+
+
+      </section>
+      
+    </div>
+  </div>
+
+ 			<footer>
+				  <p><a href="styleguide.html">Style Guide</a>
+				  <p><a href="https://github.com/CG-May/P03_Portfolio.git">GitHub</a></p></p>
+
+    <a href="citations.html">Citations</a>
+  </footer>
+</body>
+
 </html>
